@@ -1,2 +1,5 @@
-a:
-	gcc 19404050329.c -o  
+a:./inc/ringbuffer.h
+	gcc main.c -o test -Wall
+clean:
+	rm ./test
+	clear

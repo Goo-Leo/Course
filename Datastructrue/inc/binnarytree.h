@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,18 +22,8 @@ btnode* PlantBi(void){
 /* add some elements */
 void BTGrowup(btnode *root,int data){
 	btnode * newleaf = (btnode *)malloc(sizeof(btnode));
-	newleaf ->data = data;
-	if(root ->left = NULL){
-		root ->left = newleaf;
-	}
-	if(root ->right = NULL){
-		root ->right = newleaf;
-	}else
-		BTGrowup(node ->left,data);
-		BTGrowup(node ->right,data);
-	return 0;
-}
-/* Preordertraverse */
+	
+	/* Preordertraverse */
 void PreOrderTraverse(btnode *root){
 	if(root==NULL)	        return;
 	    printf("%d", root ->data);		/* output first */
@@ -69,6 +60,8 @@ int CountLeaf(BTnode* r) {
 
 /* Find node using a given keyword */
 btnode * BTFind(int key,btnode *root){
-	if()	
+	if(){
+
+	}	
 }
 

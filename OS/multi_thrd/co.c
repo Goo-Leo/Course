@@ -3,8 +3,9 @@
 
 //define a structure as abstract coroutine
 typedef struct co{
-        int co_id;
-
+        char* co_name;
+	 
+	
 }co;
 
 struct co * co_start(const char *name ,void(*fuc(void *)), void *arg){
