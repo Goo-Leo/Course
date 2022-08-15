@@ -13,7 +13,7 @@ typedef struct Node{
 Node* Makelist(void);				//create a list ,return header
 Node* FindElem(Node *head , int key);		//find element,return pointer
 void InsertElem(Node *head , int data);		//insert a new node(in the ending)	
-void DelElem(Node* head ,data);
+void DelElem(Node* head ,int data);
 
 Node* Makelist(void){
 
@@ -31,9 +31,9 @@ Node* FindElem(Node *head , int key){
 	return ptr;
 }
 
-Node* FindElemrecurse(Node *head,key){
+Node* FindElemrecurse(Node *head,int key){
 	Node *get;
-	if(head ->Next != key){
+	if(head ->Data != key){
 		head = head ->Next;
 		get = FindElemrecurse(head,key);
 	}
@@ -43,7 +43,7 @@ Node* FindElemrecurse(Node *head,key){
 void EndInsert(Node *head , int data){
 	
 	Node* ptr = head;
-	Node* newone = malloc(sizeof(Node)); 	
+	Node* newone = (Node*)malloc(sizeof(Node)); 	
         while(ptr ->Next != NULL)
 		ptr = ptr ->Next;
 	ptr ->Next = newone;
@@ -54,8 +54,8 @@ void EndInsert(Node *head , int data){
 
 void DelElem(Node *head , int key){
 	Node* del = FindElemrecurse(head,key);
-	
-	free(ptr);
+	//TODO:
+	free(&del);
 }
 
 
